@@ -1,0 +1,8 @@
+Podríamos verlos como una analogía a los endpoints que tenemos en una arquitectura .REST.
+
+type Query {
+  cursos : [Curso]
+  profesores: [Profesor]
+  curso(id: String!): Curso
+  profesor(id: String!, limite: Int): Profesor
+}

@@ -1,0 +1,10 @@
+La segunda clase de types que vamos a ver son los objects, estos son los que nos permiten definir entidades. Es uno de los más importantes para los desarrolladores.
+
+Ejemplo:
+
+type Curso {
+  id: ID! // el signo de exclamacion quiere decir que es obligatorio
+  description: String
+  profesor: [Profesor] // Los corchetes definen una lista, que puede haber mas de una entidad "Profesor"
+  rating: Int
+}

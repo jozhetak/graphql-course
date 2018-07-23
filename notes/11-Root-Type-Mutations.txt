@@ -1,0 +1,12 @@
+Graphql también nos permite hacer modificaciones, y para hacerlas, tenemos un tipo especial de endpoints que se llaman Mutation.
+A través de ellos vamos a poder insertar elementos, modificar elementos, borrar elementos, etc.
+
+Type Mutation
+Permite definir Insertar, Modificar o Eliminar elementos
+
+typeMutation {
+	agregarCurso(
+		descripcion: String,
+		profesorId: String
+	): Curso
+}

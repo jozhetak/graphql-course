@@ -1,0 +1,11 @@
+Los scalars nos van a permitir definir la mayoría de las propiedades de nuestras entidades:
+
+Int - Números enteros
+Float - Números decimales
+String - Cadenas de texto
+Boolean - Verdadero o Falso
+ID - Identificador único
+
+Se pueden definir Scalars personalizados, checa estos docs.
+http://graphql.org/learn/schema/#scalar-types
+http://dev.apollodata.com/tools/graphql-tools/scalars.html

@@ -1,0 +1,5 @@
+GraphiQL es la herramienta que más vamos a utilizar para interactuar con un esquema de GraphQL.
+Esta herramienta fue desarrollada por la misma gente de Facebook y nos permite hacer consultas, ver la documentación, interactuar con el esquema de GraphQL
+y así entender las queries que vamos a ejecutar.
+
+https://github.com/graphql/graphql-js

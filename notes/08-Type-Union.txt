@@ -1,0 +1,14 @@
+Esta clase de type es un poco más complejo que los demás, por eso te voy a dar un ejemplo para que puedas hacerte una idea de cómo funciona.
+
+Imagina que estás en Facebook y quieres hacer una búsqueda en la barra de búsquedas, cuando ingresas algo de texto automáticamente comienzan a salir 
+algunas opciones de personas, lugares, etc. Entonces, si tuviéramos que tirar eso en GraphQL, esto definiría que una búsqueda devuelve un lugar o un evento, 
+y lo logramos a través de los union que nos deja agrupar varios tipos en uno solo.
+
+Según este artículo publicado en Medium, y la documentación oficial de GraphQL
+
+Wouldn’t it be great if we could say, “Hey GraphQL, if the search result is a User, then here’s the data I want — but if it’s a Movie, then send this data.”
+
+Se pudiera interpretar que, union permite definir diferentes posibles tipos (o interfaces) que se esperan como resultado para diferentes tipos objetos 
+(o entidades) si alguna de ellas cumple con la condición definida para una búsqueda.
+
+union Busqueda = Amigo | Lugar | Evento | Pagina

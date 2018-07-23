@@ -1,0 +1,30 @@
+La ventaja de Interface es que nosotros estamos definiendo ciertos campos requeridos y sabemos que todas las implementaciones se van a cumplir. si en un futuro 
+necesitáramos que todas las implementaciones de perfil tuvieran un nuevo campo, solamente debemos agregarlo a la Interface
+
+La interfaz (interface) permite una validacióna priori de los datos y tipos mínimos que son requeridos por el nuevo objeto / entidad que la implementa.
+
+Lo que nos garantiza es que al momento de modificarse la interfaz, todos los eschemas que la implementen den un alerta o algo similar para ser revisados
+y aplicados los cambios hehcos en la interfaz.
+
+Me parece simplemente una estrategia de consistencia de datos. Interesante. Recordemos que hablamos de datos noSQL, noRelacionales …
+estructuras de datos complejas basadas en textos …
+
+// Interface
+interface Perfil{
+  nombre: String!
+  mail: String!
+}
+
+//Implementaciones de la Interface
+type PerfilFB implement Perfil{
+  nombre: String!
+  mail: String!
+  amigos: [Usuario]
+}
+
+type PerfilTW implement Perfil{
+  nombre: String!
+  mail: String!
+  handle: String
+  seguidores: [Usuario]
+}
