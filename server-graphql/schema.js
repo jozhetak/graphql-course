@@ -6,7 +6,7 @@ const typeDefs = gql`
     id: ID!
     titulo: String!
     # Esta es la descripcion del curso
-    description: String!
+    descripcion: String!
     profesor: Profesor
     rating: Float @deprecated(reason: "No creemos mas en los puntajes")
     comentarios: [Comentario]
@@ -56,8 +56,16 @@ const resolvers = {
   Curso: {
     profesor: () => {
       return {
-        nombre: 'Pablo'
+        nombre: 'Pablo',
+        nacionalidad: 'Venezuela'
       }
+    },
+    comentarios: () => {
+      return [{
+        id: 1,
+        nombre: 'Simon',
+        cuerpo: 'Desarrollador'
+      }]
     }
   }
 }
