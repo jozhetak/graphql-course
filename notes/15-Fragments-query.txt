@@ -1,0 +1,16 @@
+Los Fragments nos ayudan a abstraer duplicidad de las queries en una declaración que podemos re-utilizar. Si hay que hacer cambios lo hacemos
+en un solo lugar (El Fragment) en lugar de hacer cambios a las demas queries una por una.
+
+{
+  curso(id: 1) {
+    ...CamposNecesarios
+  }
+  cursos {
+    ...CamposNecesarios
+  }
+}
+
+fragment CamposNecesarios onCurso {
+  titulo
+  descripcion
+}

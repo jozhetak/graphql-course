@@ -1,0 +1,1 @@
+Con los inline fragments podemos pedir los campos necesarios dependiendo del tipo que devuelvan las Unions o Interfaces cuando no sabemos a qué tipo se resuelven.

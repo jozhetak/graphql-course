@@ -1,0 +1,5 @@
+Para usar variables es necesario usar la forma completa de la query.
+
+query <nombreQuery>(<$variable>: type = <valor por defecto>) {
+	...
+}
