@@ -1,4 +1,5 @@
 const { gql } = require('apollo-server')
+const Curso = require('./models/Curso')
 
 const typeDefs = gql`
   # Esto es un curso del sistema
@@ -41,17 +42,7 @@ const typeDefs = gql`
 
 const resolvers = {
   Query: {
-    cursos: () => {
-      return [{
-        id: 1,
-        titulo: 'Curso de GraphQL',
-        descripcion: 'Aprendiendo GraphQL'
-      }, {
-        id: 2,
-        titulo: 'Curso de PHP',
-        descripcion: 'Aprendiendo PHP'
-      }]
-    },
+    cursos: () => Curso.query(),
   },
   Curso: {
     profesor: () => {
