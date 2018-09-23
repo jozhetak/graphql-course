@@ -4,7 +4,12 @@ require('./db/setup')
 
 const server = new ApolloServer({
   typeDefs,
-  resolvers
+  resolvers,
+  formatError: error => {
+    return {
+      mensaje: error.message
+    }
+  },
 })
 
 server.listen().then(({ url }) => {
