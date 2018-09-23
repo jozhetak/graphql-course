@@ -10,6 +10,12 @@ const rootQuery = gql`
     curso(id: Int): Curso
     profesor(id: Int): Profesor
   }
+
+  type Mutation {
+    profesorAdd(profesor: NuevoProfesor): Profesor
+    profesorEdit(profesorId: Int!, profesor: ProfesorEditable): Profesor
+    profesorDelete(profesorId: Int!): Profesor
+  }
 `
 
 const typeDefs = [rootQuery, Profesor, Curso]
